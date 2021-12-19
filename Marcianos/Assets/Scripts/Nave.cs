@@ -6,7 +6,9 @@ public class Nave : MonoBehaviour
 {
     [SerializeField] float velocidad = 10;
     [SerializeField] Transform prefabDisparo;
+    [SerializeField] Transform prefabExplosion;
     [SerializeField] float velocidadDisparo = 2;
+    [SerializeField] UnityEngine.UI.Text textoSaludo;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,16 +35,19 @@ public class Nave : MonoBehaviour
             transform.Translate(horizontal * velocidad * Time.deltaTime, 0, 0);
             
         if(Input.GetButtonDown("Fire1"))
-        {
+        {            
             Transform disparo = Instantiate(prefabDisparo, transform.position, Quaternion.identity);
             disparo.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 
                 velocidadDisparo, 0);
-        }
-            
-    }
+            GetComponent<AudioSource>().Play();
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("Golpeado!");
+        }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            textoSaludo.text = "Hola. Prueba de texto.";
+        }
+
+
     }
 }

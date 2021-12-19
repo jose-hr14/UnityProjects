@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Disparo : MonoBehaviour
 {
+    [SerializeField] Transform prefabExplosion;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,20 @@ public class Disparo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (transform.position.y > 3)
+            Destroy(gameObject);
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Enemigo")
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+            Transform explosion = Instantiate(prefabExplosion, transform.position, Quaternion.identity);
+            Destroy(explosion.gameObject, 1f);
+        }
+    }
+
+
 }

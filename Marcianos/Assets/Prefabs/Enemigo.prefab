@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3544410886244253459}
   m_Layer: 0
   m_Name: Enemigo
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +99,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidadX: 2
   velocidadY: -1
+  velocidadDisparo: -2
+  prefabDisparoEnemigo: {fileID: 7690163768860773443, guid: eac005ffa09eb1c41847ea5f1d27e6ae, type: 3}
+  prefabExplosion: {fileID: 2209919886334490398, guid: 0744aec65a865dd48af3faa5e267d657, type: 3}
 --- !u!95 &5626888882106172458
 Animator:
   serializedVersion: 3
