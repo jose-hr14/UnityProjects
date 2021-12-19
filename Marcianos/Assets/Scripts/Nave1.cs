@@ -41,6 +41,20 @@ public class Nave1 : MonoBehaviour
             if (horizontal < 0)
                 transform.Translate(horizontal * velocidad * Time.deltaTime, 0, 0);
         }
+        else if (transform.position.x < -4 && transform.position.y < -3)
+        {
+            if (vertical > 0)
+                transform.Translate(0, vertical * velocidad * Time.deltaTime, 0);
+            if (horizontal > 0)
+                transform.Translate(horizontal * velocidad * Time.deltaTime, 0, 0);
+        }
+        else if (transform.position.x < -4 && transform.position.y > 3)
+        {
+            if (vertical < 0)
+                transform.Translate(0, vertical * velocidad * Time.deltaTime, 0);
+            if (horizontal > 0)
+                transform.Translate(horizontal * velocidad * Time.deltaTime, 0, 0);
+        }
         else if (transform.position.x < -4)
         {
             if (horizontal > 0)
