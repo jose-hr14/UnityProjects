@@ -109,9 +109,9 @@ public class Nave1 : MonoBehaviour
         if (collision.tag == "Enemigo")
         {
             Destroy(gameObject);
+            Destroy(collision.gameObject);
             Instantiate(prefabExplosion, transform.position, Quaternion.identity);
             textoPartidaPerdida.text = "Game over \n Has perdido";
         }
-
     }
 }
