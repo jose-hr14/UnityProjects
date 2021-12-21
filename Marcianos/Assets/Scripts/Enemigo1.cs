@@ -24,8 +24,6 @@ public class Enemigo1 : MonoBehaviour
 
         StartCoroutine(Disparar());
     }
-
-    // Update is called once per frame
     void Update()
     {        
         transform.Translate(0, velocidadY * Time.deltaTime, 0);
