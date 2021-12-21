@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Nave1 : MonoBehaviour
@@ -106,7 +104,7 @@ public class Nave1 : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemigo")
+        if (collision.CompareTag("Enemigo"))
         {
             Destroy(gameObject);
             Destroy(collision.gameObject);

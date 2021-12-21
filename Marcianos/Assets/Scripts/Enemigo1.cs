@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemigo1 : MonoBehaviour
@@ -40,8 +39,4 @@ public class Enemigo1 : MonoBehaviour
         if (transform.position.x > 5)
             Destroy(gameObject);
     }
-
-
-
-
 }
