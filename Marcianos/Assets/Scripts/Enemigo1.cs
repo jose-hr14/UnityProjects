@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemigo1 : MonoBehaviour
 {
-    [SerializeField] float velocidadX = 0;
+    [SerializeField] float velocidadX;
     [SerializeField] float velocidadY = -1;
     [SerializeField] float velocidadDisparo = -2;
     [SerializeField] Transform prefabDisparoEnemigo;
