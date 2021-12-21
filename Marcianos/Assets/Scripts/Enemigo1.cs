@@ -9,8 +9,7 @@ public class Enemigo1 : MonoBehaviour
     [SerializeField] float velocidadDisparo = -2;
     [SerializeField] Transform prefabDisparoEnemigo;
     [SerializeField] Transform prefabExplosion;
-    [SerializeField] UnityEngine.UI.Text textoPartidaPerdida;
-    // Start is called before the first frame update
+    [SerializeField] UnityEngine.UI.Text textoPartidaPerdida;    
     void Start()
     {
         StartCoroutine(Disparar());
