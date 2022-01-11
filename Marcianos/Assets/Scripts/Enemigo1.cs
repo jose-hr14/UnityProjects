@@ -7,12 +7,15 @@ public class Enemigo1 : MonoBehaviour
     [SerializeField] float velocidadDisparo = -2;
     [SerializeField] Transform prefabDisparoEnemigo;
     [SerializeField] Transform prefabExplosion;
-    [SerializeField] UnityEngine.UI.Text textoPartidaPerdida;    
+    [SerializeField] UnityEngine.UI.Text textoPartidaPerdida;
+    //Cuando se instancie la nave enemiga al iniciar la escena, llamará a la corrutina disparar.
     void Start()
     {
         StartCoroutine(Disparar());
     }
-
+    //Esta corrutina deja una espera aleatoria de entre 1 y 6 segundos entre disparo y disparo.
+    //Finalizada la espera, la nave instancia un disparo enemigo, y le asigna una velocidad para
+    //que este se desplace hacia la derecha, además de hacer sonar el sonido del disparo.
     IEnumerator Disparar()
     {
         float pausa = Random.Range(1.0f, 6.0f);
@@ -23,6 +26,8 @@ public class Enemigo1 : MonoBehaviour
 
         StartCoroutine(Disparar());
     }
+    //Ejecutado por cada frame, hace que la nave se desplace hacia abajo hasta llegar al límite de la pantalla.
+    //Al tocar el límite, se desplazará ligeramente hacia la derecha y subirá. Así sucesivamente.
     void Update()
     {        
         transform.Translate(0, velocidadY * Time.deltaTime, 0);

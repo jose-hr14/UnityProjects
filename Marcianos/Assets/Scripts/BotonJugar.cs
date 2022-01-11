@@ -16,6 +16,7 @@ public class BotonJugar : MonoBehaviour
     {
         
     }
+    //Lanza el primer nivel de juego cuando se clica en el botón
     public void LanzarJuego()
     {
         SceneManager.LoadScene("Nivel1");
