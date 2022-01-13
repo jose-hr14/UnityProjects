@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a313d31e-3e8e-4756-9ff8-19bee99006f8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MyFirst3DProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyFirst3DProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pelota.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pelota.cs" afterDir="false" />
-    </list>
+    <list default="true" id="a313d31e-3e8e-4756-9ff8-19bee99006f8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1642008680618</updated>
       <workItem from="1642008779667" duration="1700000" />
-      <workItem from="1642086681469" duration="3017000" />
+      <workItem from="1642086681469" duration="3086000" />
     </task>
     <servers />
   </component>
