@@ -11,6 +11,10 @@ public class PlayerController : MonoBehaviour {
 	public float speed;
 	public Text countText;
 	public Text winText;
+	private Renderer r;
+	public float fuerzaDeSalto = 5;
+	public Transform particulasPared;
+	public Transform particulasPickUp;
 
 	// Create private references to the rigidbody component on the player, and the count of pick up objects picked up so far
 	private Rigidbody rb;
@@ -21,6 +25,7 @@ public class PlayerController : MonoBehaviour {
 	{
 		// Assign the Rigidbody component to our private rb variable
 		rb = GetComponent<Rigidbody>();
+		r = GetComponent<Renderer>();
 
 		// Set the count to zero 
 		count = 0;
@@ -32,8 +37,16 @@ public class PlayerController : MonoBehaviour {
 		winText.text = "";
 	}
 
-	// Each physics step..
-	void FixedUpdate ()
+    private void Update()
+    {
+        if(Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.1F)
+        {
+			rb.AddForce(Vector3.up * fuerzaDeSalto, ForceMode.Impulse);
+        }
+    }
+
+    // Each physics step..
+    void FixedUpdate ()
 	{
 		// Set some local float variables equal to the value of our Horizontal and Vertical Inputs
 		float moveHorizontal = Input.GetAxis ("Horizontal");
@@ -62,6 +75,11 @@ public class PlayerController : MonoBehaviour {
 
 			// Run the 'SetCountText()' function (see below)
 			SetCountText ();
+
+			if (transform.localScale.x < 3)
+				transform.localScale += new Vector3(0.05f, 0.05f, 0.05f);
+			Transform particulasPickUpInstanciadas = Instantiate(particulasPickUp, gameObject.transform.position, Quaternion.identity);			
+			Destroy(particulasPickUpInstanciadas.gameObject, 1);
 		}
 	}
 
@@ -76,6 +94,32 @@ public class PlayerController : MonoBehaviour {
 		{
 			// Set the text value of our 'winText'
 			winText.text = "You Win!";
+		}
+	}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("ParedHorizontal"))
+        {
+			r.material.color = new Color(Mathf.Round(Random.value),
+				Mathf.Round(Random.value), Mathf.Round(Random.value));
+			if(transform.localScale. x < 3)
+				transform.localScale += new Vector3(0.05f, 0.05f, 0.05f);
+			collision.transform.localScale -= new Vector3(0, 0.05f, 0);
+			collision.transform.position -= new Vector3(0, 0.025f, 0);
+			Transform particulasParedInstanciadas = Instantiate(particulasPared, gameObject.transform.position, Quaternion.identity);
+			Destroy(particulasParedInstanciadas.gameObject, 1);
+		}
+		if (collision.gameObject.CompareTag("ParedVertical"))
+		{
+			r.material.color = new Color(Mathf.Round(Random.value),
+				Mathf.Round(Random.value), Mathf.Round(Random.value));
+			if (transform.localScale.x > 0.5)
+				transform.localScale -= new Vector3(0.05f, 0.05f, 0.05f);			
+			collision.transform.localScale -= new Vector3(0, 0.05f, 0);
+			collision.transform.position -= new Vector3(0, 0.025f, 0);
+			Transform particulasParedInstanciadas = Instantiate(particulasPared, gameObject.transform.position, Quaternion.identity);
+			Destroy(particulasParedInstanciadas.gameObject, 1);
 		}
 	}
 }

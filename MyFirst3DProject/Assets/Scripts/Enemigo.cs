@@ -17,12 +17,9 @@ public class Enemigo : MonoBehaviour
     void Update()
     {
         // Nos movemos hacia la siguiente posición
-        transform.position = Vector3.MoveTowards(transform.position,
-        siguientePosicion,
-       velocidad * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, siguientePosicion, velocidad * Time.deltaTime);
         // Si la distancia al punto es corta cambiamos al siguiente
-        if (Vector3.Distance(transform.position,
-        siguientePosicion) < distanciaCambio)
+        if (Vector3.Distance(transform.position, siguientePosicion) < distanciaCambio)
         {
             numeroSiguientePosicion++;
             if (numeroSiguientePosicion >= wayPoints.Length)
