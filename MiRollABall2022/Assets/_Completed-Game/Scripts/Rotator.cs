@@ -21,7 +21,7 @@ public class Rotator : MonoBehaviour {
     IEnumerator CambiarColor()
     {
         //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(1.5f);
 
         //After we have waited 5 seconds print the time again.
         renderer.material.color = new Color(Random.value,

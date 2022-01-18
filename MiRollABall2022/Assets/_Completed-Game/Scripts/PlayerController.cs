@@ -103,10 +103,15 @@ public class PlayerController : MonoBehaviour {
         {
 			r.material.color = new Color(Mathf.Round(Random.value),
 				Mathf.Round(Random.value), Mathf.Round(Random.value));
-			if(transform.localScale. x < 3)
-				transform.localScale += new Vector3(0.05f, 0.05f, 0.05f);
-			collision.transform.localScale -= new Vector3(0, 0.05f, 0);
-			collision.transform.position -= new Vector3(0, 0.025f, 0);
+			if(transform.localScale. x < 5)
+				transform.localScale += new Vector3(0.5f, 0.5f, 0.5f);
+			if (collision.transform.localScale.y > 3)
+            {
+				collision.transform.localScale -= new Vector3(0, 3f, 0);
+				collision.transform.position -= new Vector3(0, 1.5f, 0);
+			}
+			else
+				Destroy(collision.gameObject);
 			Transform particulasParedInstanciadas = Instantiate(particulasPared, gameObject.transform.position, Quaternion.identity);
 			Destroy(particulasParedInstanciadas.gameObject, 1);
 		}
@@ -115,9 +120,15 @@ public class PlayerController : MonoBehaviour {
 			r.material.color = new Color(Mathf.Round(Random.value),
 				Mathf.Round(Random.value), Mathf.Round(Random.value));
 			if (transform.localScale.x > 0.5)
-				transform.localScale -= new Vector3(0.05f, 0.05f, 0.05f);			
-			collision.transform.localScale -= new Vector3(0, 0.05f, 0);
-			collision.transform.position -= new Vector3(0, 0.025f, 0);
+				transform.localScale -= new Vector3(0.5f, 0.5f, 0.5f);
+			if (collision.transform.localScale.y > 3)
+			{
+				collision.transform.localScale -= new Vector3(0, 3f, 0);
+				collision.transform.position -= new Vector3(0, 1.5f, 0);
+			}
+			else
+				Destroy(collision.gameObject);
+
 			Transform particulasParedInstanciadas = Instantiate(particulasPared, gameObject.transform.position, Quaternion.identity);
 			Destroy(particulasParedInstanciadas.gameObject, 1);
 		}
