@@ -1,58 +1,66 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    private int itemsRecogidos;
-    public int puntos = 0;
-    public int vidas = 3;
-    public int nivelActual = 1;
-    public int nivelMasAlto = 2;
-    private void Awake()
+    [SerializeField] int numeroSiguienteEscena;
+
+    private Salida salida;
+
+    // Recogeremos en variables el objeto salida que encontremos en la escena, y lo desactivaremos para que permanezca
+    // oculto hasta que se recojan todos los items. Al estar guardado en una variable, podremos acceder aún estando
+    // desactivado el objeto salida.
+    void Start()
     {
-        int gameStatusCount = FindObjectsOfType<GameController>().Length;
-        if (gameStatusCount > 1)
+        salida = FindObjectOfType<Salida>();
+        salida.gameObject.SetActive(false);
+    }
+
+    // Esta función la llamaremos de forma externa, y lo que hará será restaruna vida al registro de las mismas que 
+    // lleva el objeto game status. Si el número de vidas es menor o igual a cero, se llamará a la corutina game over.
+    public void PerderVida()
+    {
+        if (FindObjectOfType<GameStatus>().vidas <= 0)
         {
-            Destroy(gameObject);
+            StartCoroutine(GameOver());
         }
         else
         {
-            DontDestroyOnLoad(gameObject);
+            FindObjectOfType<GameStatus>().vidas -= 1;
+            FindObjectOfType<Jugador>().SendMessage("Recolocar");
+            Debug.Log("Quedan " + FindObjectOfType<GameStatus>().vidas + " vidas.");
         }
     }
-    // Start is called before the first frame update
-    void Start()
+
+    // Esta corutina ralentiza el tiempo durante 3 segundos y carga la escena game over, que mostrará que la partida
+    // ha acabado junto a la puntuación obtenida.
+    private IEnumerator GameOver()
     {
-        puntos = 0;
-        vidas = 3;
-        itemsRecogidos = 0;
+        Time.timeScale = 0.1f;
+        yield return new WaitForSeconds(0.3f);
+        Time.timeScale = 1;
+        SceneManager.LoadScene("GameOver");
     }
-    public void PerderVida()
-    {
-        vidas--;
-        FindObjectOfType<Jugador>().SendMessage("Recolocar");
-        Debug.Log("Quedan " + vidas + " vidas.");
-        if(vidas <= 0){
-            Debug.Log("Partida terminada");
-            Application.Quit();
-        }
-    }
+
     public void AnotarItemRecogido()
     {
-        puntos += 100;
-        Debug.Log("Puntos: " + puntos);
-        itemsRecogidos++;
-        Debug.Log(("Items: " + itemsRecogidos));
-        if (FindObjectsOfType<Item>().Length <= 0)
-            FindObjectOfType<Salida>().gameObject.SetActive(true);
+        FindObjectOfType<GameStatus>().puntos += 100;
+        Debug.Log("Puntos: " + FindObjectOfType<GameStatus>().puntos);
+        FindObjectOfType<GameStatus>().itemsRecogidos += 1;
+        Debug.Log(("Items: " + FindObjectOfType<GameStatus>().itemsRecogidos));
+        Debug.Log(FindObjectsOfType<Item>().Length);
+        if (FindObjectsOfType<Item>().Length <= 1)
+            salida.gameObject.SetActive(true);
     }
+
     public void AvanzarNivel()
     {
-        if(SceneManager.sceneCountInBuildSettings == 1)
+        if (SceneManager.sceneCountInBuildSettings == 1)
             Debug.Log("Fin del juego");
-        SceneManager.LoadScene("Nivel2");
-        itemsRecogidos = 0;
+        SceneManager.LoadScene(numeroSiguienteEscena);
+        FindObjectOfType<GameStatus>().itemsRecogidos = 0;
     }
 }

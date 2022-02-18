@@ -6,9 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: "Assets/Scenes/T\xEDtulo.unity"
+    guid: d35f8932655846d4a903860e7da08edb
+  - enabled: 1
     path: Assets/Scenes/Nivel1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Nivel2.unity
-    guid: 9ffe658a465195c4c84ec23f47fca174
+    guid: b7939195f98d0c449850ab3aaaca887b
+  - enabled: 1
+    path: Assets/Scenes/FinJuego.unity
+    guid: 8eb2501a1c0bdfb48839b1b6fe5969ae
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 72f56704547cdfb49b515932917924f6
   m_configObjects: {}

@@ -6,18 +6,13 @@ using UnityEngine.UI;
 public class Enemigo : MonoBehaviour
 {
     [SerializeField] List<Transform> wayPoints;
-    [SerializeField] float velocidad;
+    [SerializeField] public float velocidad;
     private byte siguientePosicion;
-    private GameController gameController;
     [SerializeField] private float distanciaCambio;
-    void Start()
-    {
-        gameController = FindObjectOfType<GameController>();
-        siguientePosicion = 0;
+    [SerializeField] public AudioClip audioClip;
 
-    }
-
-    // Update is called once per frame
+    // En el update programamos a los enemigos para que se muevan hacia los distintos waypoints del warray, y cuando
+    // llegue al último, volverá a desplazarse hacia al primero.
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position,
@@ -27,9 +22,8 @@ public class Enemigo : MonoBehaviour
                 wayPoints[siguientePosicion].transform.position) < distanciaCambio)
         {
             siguientePosicion++;
-            if (siguientePosicion >= wayPoints.Count) 
+            if (siguientePosicion >= wayPoints.Count)
                 siguientePosicion = 0;
         }
-
     }
 }

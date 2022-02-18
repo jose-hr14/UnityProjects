@@ -5,21 +5,11 @@ using UnityEngine;
 
 public class Fondo : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // Si el collider del fondo, el cual se encontará en la parte inferior del mismo colisiona con el rigid body del
+    // jugador, se llamará a la función de perder vida del game controller.
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
             FindObjectOfType<GameController>().PerderVida();
     }
 }
