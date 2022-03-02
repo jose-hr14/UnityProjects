@@ -18,7 +18,7 @@ public class GameStatus : MonoBehaviour
     private void Awake()
     {
         int gameStatusCount = FindObjectsOfType<GameStatus>().Length;
-        enemigosRestantes = FindObjectsOfType(typeof(Enemigo)).Length - 1;
+        enemigosRestantes = FindObjectsOfType(typeof(Enemigo)).Length;
         if (gameStatusCount > 1)
         {
             Destroy(gameObject);
@@ -31,7 +31,7 @@ public class GameStatus : MonoBehaviour
 
     private void Start()
     {
-        enemigosRestantes = FindObjectsOfType<Enemigo>().Length - 1;
+        enemigosRestantes = FindObjectsOfType<Enemigo>().Length;
     }
 
     // Por cada frame, se actualizará la información de items recogidos, puntuación y vida

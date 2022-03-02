@@ -20,9 +20,12 @@ public class SimpleShoot : MonoBehaviour
     [Tooltip("Bullet Speed")] [SerializeField] private float shotPower = 500f;
     [Tooltip("Casing Ejection Speed")] [SerializeField] private float ejectPower = 150f;
 
+    Camera camara;
+
 
     void Start()
     {
+        camara = FindObjectOfType<Camera>();
         if (barrelLocation == null)
             barrelLocation = transform;
 
@@ -59,7 +62,7 @@ public class SimpleShoot : MonoBehaviour
         { return; }
 
         // Create a bullet and add force on it in direction of the barrel
-        Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation).GetComponent<Rigidbody>().AddForce(barrelLocation.forward * shotPower);
+        Instantiate(bulletPrefab, barrelLocation.position, camara.transform.rotation).GetComponent<Rigidbody>().AddForce(barrelLocation.forward * shotPower);
 
     }
 
