@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour
         Debug.Log(FindObjectsOfType<Enemigo>().Length);
         if (FindObjectOfType<GameStatus>().enemigosRestantes < 1)
         {
-            
+            AvanzarNivel();
         }
     }
 

@@ -15,13 +15,13 @@ public class Jugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        /*if (Input.GetButtonDown("Fire1"))
         {
             Debug.Log("Disparando...");
             float distanciaMaxima = 50;
             RaycastHit hit;
             bool impactado = Physics.Raycast(camara.transform.position,
-                camara.transform.forward, out hit, distanciaMaxima);
+                w, out hit, distanciaMaxima);
             if (impactado)
             {
                 Debug.Log("Disparo impactado");
@@ -31,6 +31,6 @@ public class Jugador : MonoBehaviour
                     hit.collider.gameObject.SendMessage("QuitarVida");
                 }
             }
-        }
+        }*/
     }
 }
