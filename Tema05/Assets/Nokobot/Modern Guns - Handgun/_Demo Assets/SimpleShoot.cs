@@ -52,6 +52,7 @@ public class SimpleShoot : MonoBehaviour
             //Create the muzzle flash
             GameObject tempFlash;
             tempFlash = Instantiate(muzzleFlashPrefab, barrelLocation.position, barrelLocation.rotation);
+            GetComponent<AudioSource>().Play();
 
             //Destroy the muzzle flash effect
             Destroy(tempFlash, destroyTimer);

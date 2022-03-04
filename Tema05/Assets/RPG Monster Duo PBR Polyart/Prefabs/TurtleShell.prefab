@@ -822,6 +822,7 @@ GameObject:
   - component: {fileID: 2038565358}
   - component: {fileID: 2038565357}
   - component: {fileID: 2038565356}
+  - component: {fileID: 6758837415877285550}
   m_Layer: 0
   m_Name: TurtleShell
   m_TagString: Enemigo
@@ -906,6 +907,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wayPoints: []
+  particulasChoque: {fileID: 4000010212820824, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
+  audioSource: {fileID: 8300000, guid: 6f80dfc1c9497ec4a90fa0bb51053941, type: 3}
+--- !u!195 &6758837415877285550
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837317425425208}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &1914324128724412
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,7 +971,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4583875527411118}
   - component: {fileID: 137359634230426430}
-  - component: {fileID: 1624360915}
   m_Layer: 0
   m_Name: TurtleShell
   m_TagString: Untagged
@@ -1050,19 +1074,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.4468751, y: 0.3599043, z: 0}
     m_Extent: {x: 0.7597804, y: 0.7337334, z: 0.7809485}
   m_DirtyAABB: 0
---- !u!114 &1624360915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923079511184120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a4ebef51f2728b4791011b7fdad5db3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wayPoints: []
 --- !u!1 &1940742628305044
 GameObject:
   m_ObjectHideFlags: 0
