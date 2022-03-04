@@ -888,7 +888,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1837317425425208}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 4958b3b13f036b54592cbf5fba7a3d13, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -906,7 +906,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4ebef51f2728b4791011b7fdad5db3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wayPoints: []
+  wayPoints:
+  - {fileID: 0}
+  - {fileID: 0}
   particulasChoque: {fileID: 4000010212820824, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
   audioSource: {fileID: 8300000, guid: 6f80dfc1c9497ec4a90fa0bb51053941, type: 3}
 --- !u!195 &6758837415877285550

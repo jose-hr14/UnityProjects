@@ -11,7 +11,7 @@ public class Enemigo : MonoBehaviour
     private int vidas;
     Vector3 siguientePosicion;
     byte numeroSiguientePosicion;
-    float distanciaCambio = 0.2f;
+    float distanciaCambio = 2f;
     float velocidad = 2;
     [SerializeField] private AudioClip audioSource;
     void Start()
