@@ -1,6 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
+using Random = UnityEngine.Random;
 
 [AddComponentMenu("Nokobot/Modern Guns/Simple Shoot")]
 public class SimpleShoot : MonoBehaviour
@@ -47,6 +51,19 @@ public class SimpleShoot : MonoBehaviour
     //This function creates the bullet behavior
     void Shoot()
     {
+        // Create a StackTrace that captures
+        // filename, line number, and column
+        // information for the current thread.
+        StackTrace st = new StackTrace(true);
+        for(int i =0; i< st.FrameCount; i++ )
+        {
+            // Note that high up the call stack, there is only
+            // one stack frame.
+            StackFrame sf = st.GetFrame(i);
+            Debug.Log(("High up the call stack, Method: {0}" + sf.GetMethod()));
+
+            Debug.Log("High up the call stack, Line Number: {0}" + sf.GetFileLineNumber().ToString());
+        }
         if (muzzleFlashPrefab)
         {
             //Create the muzzle flash
