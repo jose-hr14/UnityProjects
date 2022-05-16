@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="KartGame.KartSystems.ArcadeKart">
+    <Position X="0.5" Y="4.5" Width="4.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="KartGame.KartSystems.ArcadeKart.StatPowerup" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Karting\Scripts\KartSystems\ArcadeKart.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Struct Name="KartGame.KartSystems.ArcadeKart.Stats" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Karting\Scripts\KartSystems\ArcadeKart.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAKlggSGAskAFAAcqSGICwAAEXAiGUNtAEIIIAgQCUE=</HashCode>
+      <FileName>Assets\Karting\Scripts\KartSystems\ArcadeKart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.MonoBehaviour">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="GameFlowManager">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQREEAAACCAACgAAggAAEAAAAgQAAAAgAAwBACbAAA=</HashCode>
+      <FileName>Assets\Karting\Scripts\GameFlowManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectiveManager">
+    <Position X="7.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EEAAAACAAAAQAAAAAAAAAAAAAAAAAAAAAAABAAAACAA=</HashCode>
+      <FileName>Assets\Karting\Scripts\ObjectiveManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AudioManager">
+    <Position X="9" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAgAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Assets\Karting\Scripts\AudioManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeManager">
+    <Position X="10.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gBQAAIAAAGAAABAAAAAAAAAAAAAhAAEIAAAAYAAACEA=</HashCode>
+      <FileName>Assets\Karting\Scripts\TimeManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KartGame.KartSystems.KeyboardInput">
+    <Position X="12.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAEAIAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Karting\Scripts\KartSystems\Inputs\KeyboardInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KartGame.KartSystems.BaseInput">
+    <Position X="12.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Karting\Scripts\KartSystems\Inputs\BaseInput.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ObjectiveReachTargets">
+    <Position X="16.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAgAAEAAACAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Karting\Scripts\GameModes\ObjectiveReachTargets.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Objective">
+    <Position X="14.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBwAIAFAQCAABAABpiAAgQAQEiAhIMAIAABAAAIACAA=</HashCode>
+      <FileName>Assets\Karting\Scripts\Objective.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DisplayMessage">
+    <Position X="18" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIgAAABAAAAAAAAIAAQBAAAAAEgAAAAAAAAAACCA=</HashCode>
+      <FileName>Assets\Karting\Scripts\UI\DisplayMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LapObject">
+    <Position X="18.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAABAAAAAAAAAAQAAQAAAACAA=</HashCode>
+      <FileName>Assets\Karting\Scripts\GameModes\LapObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TargetObject">
+    <Position X="19.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAABQAAAIAAAIEIACAA=</HashCode>
+      <FileName>Assets\Karting\Scripts\GameModes\TargetObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PickupObject">
+    <Position X="21.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAAAAAABAAAgAAAAAQAAAAAQAAAA=</HashCode>
+      <FileName>Assets\Karting\Scripts\GameModes\PickupObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="GameState">
+    <Position X="7.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Karting\Scripts\GameFlowManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

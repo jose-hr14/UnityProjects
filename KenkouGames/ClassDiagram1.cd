@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="KartGame.KartSystems.ArcadeKart">
+    <Position X="0.5" Y="2" Width="5.75" />
+    <NestedTypes>
+      <Class Name="KartGame.KartSystems.ArcadeKart.StatPowerup" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Karting\Scripts\KartSystems\ArcadeKart.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Struct Name="KartGame.KartSystems.ArcadeKart.Stats" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Karting\Scripts\KartSystems\ArcadeKart.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAKlggSGAskAFAAcqSGICwAAEXAiGUNtAEIIIAgQCUE=</HashCode>
+      <FileName>Assets\Karting\Scripts\KartSystems\ArcadeKart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityEngine.MonoBehaviour" Collapsed="true">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="GameFlowManager">
+    <Position X="12.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQREEAAACCAACgAAggAAEAAAAgQAAAAgAAwBACbAAA=</HashCode>
+      <FileName>Assets\Karting\Scripts\GameFlowManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KartGame.KartSystems.KartAnimation">
+    <Position X="6.75" Y="2.25" Width="1.5" />
+    <NestedTypes>
+      <Class Name="KartGame.KartSystems.KartAnimation.Wheel" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Karting\Scripts\KartSystems\KartAnimation\KartAnimation.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAiQAAAAIAgAAIAIBAACAAAAgAAAAAACAAAA=</HashCode>
+      <FileName>Assets\Karting\Scripts\KartSystems\KartAnimation\KartAnimation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KartGame.KartSystems.KeyboardInput">
+    <Position X="8.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAEAIAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Karting\Scripts\KartSystems\Inputs\KeyboardInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KartGame.KartSystems.BaseInput">
+    <Position X="8.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Karting\Scripts\KartSystems\Inputs\BaseInput.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ObjectiveReachTargets">
+    <Position X="10.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAgAAEAAACAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Karting\Scripts\GameModes\ObjectiveReachTargets.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="GameState">
+    <Position X="14.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Karting\Scripts\GameFlowManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
